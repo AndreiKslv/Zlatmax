@@ -1012,12 +1012,12 @@ function productsFilter() {
 				${cardDiscount}
 				<div class="common-card__wrapper">
 					<div class="common-card__img-wrapper">
-						<a class="common-card__img-link" href="http://localhost:8000/inspect.html">
+						<a class="common-card__img-link" href="inspect.html">
 							<img class="common-card__img" src="./img/common-card/${item.imgSrc}" alt="Нож">
 						</a>
 					</div>
 					<h4 class="common-card__title">
-						<a class="common-card__title-link" href="http://localhost:8000/inspect.html">${item.title}</a>
+						<a class="common-card__title-link" href="inspect.html">${item.title}</a>
 					</h4>
 					<div class="common-card__card-info">
 						<span class="common-card__product-size">${item.steel}</span>
@@ -1042,7 +1042,7 @@ function productsFilter() {
 					</div>
 					<div class="common-card__price-info">
 						<div class="common-card__price">
-							<a class="common-card__price-link" href="http://localhost:8000/inspect.html">
+							<a class="common-card__price-link" href="inspect.html">
 								<span class="common-card__price-number">${item.price}</span> р.
 							</a>
 						</div>
