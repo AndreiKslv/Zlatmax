@@ -1,0 +1,103 @@
+.select-phonenumbers {
+	display: flex;
+	flex-direction: column;
+	gap: rem(3);
+
+	font-size: rem(18);
+	color: var(--dark-color2);
+	font-weight: 600;
+
+	position: relative;
+
+	&__phone-icon {
+		display: none;
+
+		@include media-breakpoint($l) {
+			display: inline-flex;
+		}
+	}
+
+    &__select {
+		display: flex;
+		align-items: center;
+		gap: rem(13);
+
+		@include media-breakpoint($l) {
+			display: none;
+		}
+	}
+
+    &__link {
+		color: var(--dark-color2);
+		
+		transition: color .3s ease;
+		@media (hover: hover) {
+			&:hover {
+				color: var(--accent-color);
+				transition: color .3s ease;
+			}
+		}
+	}
+
+    &__list {
+		display: none;
+
+		position: absolute;
+		left: rem(-10);
+		bottom: 0;
+		transform: translateY(105%);
+		z-index: 6;
+
+		padding: rem(10);
+
+		border-radius: rem(5);
+		background: var(--light-color);
+
+		box-shadow: rem(3) rem(3) rem(15) var(--boxShadow-light-color);
+	}
+
+	&__list--active {
+		display: block;
+	}
+
+    &__list-item {
+		&:not(:last-child) {
+			margin-bottom: rem(7);
+		}
+	}
+
+    &__list-link {
+		color: var(--dark-color2);
+		transition: color .3s ease;
+		@media (hover: hover) {
+			&:hover {
+				color: var(--accent-color);
+				transition: color .3s ease;
+			}
+		} 
+	}
+
+    &__button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		padding: rem(4);
+
+		transition: transform .3s ease;
+	}
+
+	&__button--active {
+		transform: rotate(-180deg);
+		transition: transform .3s ease;
+	}
+
+    &__order-text {
+		color: var(--accent-color);
+		font-weight: 700;
+
+		@include media-breakpoint($l) {
+			display: none;
+		}
+	}
+}

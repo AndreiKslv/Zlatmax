@@ -1,0 +1,23 @@
+/* Base */
+@import "./base/fonts";
+@import "./base/reset";
+@import "./base/vars";
+@import "./base/functions";
+@import "./base/extends";
+@import "./base/mixins";
+@import "./base/utils";
+@import "./base/sticky-footer";
+@import "./base/base";
+
+
+/* Blocks */
+@import "./common/*.scss";
+/* Uniq */
+@import "./uniq/breadcrumbs";
+@import "./uniq/select-group";
+@import "./uniq/delivery-order";
+@import "./uniq/common-card-swiper";
+@import "./uniq/swiper-section";
+/* Inspect */
+@import "./inspect/inspect.scss";
+@import "./inspect/inspect-tabs.scss";

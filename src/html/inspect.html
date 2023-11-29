@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Zlatmax</title>
+	<link rel="stylesheet" href="./css/inspect.css" />
+</head>
+
+<body>
+	@@include('templates/header.html')
+	<main class="main">
+		@@include('templates/breadcrumbs/breadcrumbs-inspect.html')
+		@@include('templates/inspect/inspect.html')
+		@@include('templates/inspect/inspect-tabs.html')
+		@@include('templates/swiper-sections/swiper-alike.html')
+		@@include('templates/swiper-sections/swiper-recommends.html')
+	</main>
+	@@include('templates/footer.html')
+
+	<script src="./js/inspect.bundle.js"></script>
+</body> 
+
+</html>

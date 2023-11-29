@@ -1,0 +1,59 @@
+.articles {
+	padding: rem(60) 0;
+
+    &__title {
+		margin-bottom: rem(30);
+	}
+
+    &__cards {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: rem(30);
+
+		@include media-breakpoint($l) {
+			grid-template-columns: repeat(auto-fit, minmax(rem(290), rem(375)));
+			justify-content: center;
+		}
+	}
+
+    &__card {
+		display: flex;
+		flex-direction: column;
+
+		max-width: rem(375);
+
+		background: var(--light-color4);
+		box-shadow: 0 rem(4) rem(20) 0 var(--boxShadow-dark-color);
+
+		transition: transform .3s ease;
+		&:hover {
+			transform: scale(1.05);
+			transition: transform .3s ease;
+		}
+	}
+
+    &__text {
+		padding: rem(20) rem(30);
+	}
+
+    &__card-title {
+		margin: rem(20) rem(30) rem(10) rem(30);
+
+		font-size: rem(20);
+		font-weight: 600;
+		line-height: 1.7;
+	}
+
+	&__card-title-link {
+		color: var(--dark-color);
+	}
+
+    &__card-date {
+		margin: auto rem(30) rem(20) rem(30);
+
+		color: var(--grey-color);
+		font-weight: 500;
+		line-height: 2.1;
+	}
+}
+

@@ -1,0 +1,59 @@
+.swiper-section {
+	padding: rem(60) 0 rem(60);
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: rem(40);
+
+		@include media-breakpoint($sm) {
+			gap: 0;
+		}
+	}
+
+    &__top {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__link-wrapper {
+		@include media-breakpoint($md) {
+			display: none;
+		}
+	}
+
+	&__link-wrapper-bottom {
+		display: none;
+
+		@include media-breakpoint($md) {
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+
+	&__link {
+		color: var(--dark-opacity-color);
+		font-size: rem(18);
+		font-weight: 600;
+		line-height: 2.5; 
+		letter-spacing: rem(0.9);
+
+		padding-right: rem(25);
+
+		position: relative;
+		&::after {
+			content: "";
+
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%) rotate(-90deg);
+
+			width: rem(18);
+			height: rem(18);
+
+			background: url(./../img/icons/accent-arrow.svg) no-repeat;
+			background-position: 0 rem(8);
+		}
+	}
+}

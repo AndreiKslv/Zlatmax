@@ -1,0 +1,56 @@
+.breadcrumbs {
+	padding: rem(30) 0 rem(30) rem(7);
+
+	background: var(--light-color);
+
+	@include media-breakpoint($sm) {
+		padding: rem(15) 0;
+
+		font-size: rem(14);
+	}
+
+	@include media-breakpoint($xs) {
+		font-size: rem(12);
+	}
+
+    &__list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: rem(15);
+	}
+
+    &__item {
+		position: relative;
+		padding-right: rem(23);
+
+		&:not(:last-child)::after {
+			content: '';
+
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+
+			width: rem(8);
+			height: rem(12);
+
+			background: url(./../img/icons/grey-arrow.svg);
+			background-repeat: no-repeat;
+		}
+	}
+
+    &__link {
+		color: var(--dark-opacity-color);
+		transition: color .2s ease;
+
+		&:hover {
+			color: var(--accent-color);
+			transition: color .2s ease;
+		}
+		
+      	&--active {
+			color: var(--accent-color);
+		}
+    }
+}

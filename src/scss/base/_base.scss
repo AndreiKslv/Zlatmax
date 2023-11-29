@@ -1,0 +1,18 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--light-color4);
+	
+	color: var(--main-font-color);
+    font-family: var(--main-font-family);
+	font-weight: var(--main-font-weight);
+	line-height: var(--main-line-heigh);
+}
+
+.container {
+	max-width: rem(1620);
+	padding: 0 15px;
+	margin: 0 auto;
+}

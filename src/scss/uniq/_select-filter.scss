@@ -1,0 +1,194 @@
+.select-filter {
+	max-width: rem(375);
+
+	position: relative;
+	&::after {
+		content: '';
+
+		display: block;
+
+		position: absolute;
+		top: 50%;
+		right: rem(20);
+		transform: translateY(-50%) rotate(90deg);
+
+		width: rem(8);
+		height: rem(12);
+
+		background: url(./../img/icons/grey-arrow.svg);
+		background-repeat: no-repeat;
+
+		pointer-events: none;
+	}
+
+	&__select {
+		appearance: none;
+		// Убираем стрелочку в IE 10 и 11
+		&::-ms-expand {
+			display: none;
+		}
+
+		flex-grow: 1;
+
+		width: 100%;
+
+		padding: rem(10) rem(28) rem(10) rem(20);
+		border: rem(1) solid var(--border-dark-color2);
+
+		border-radius: rem(3);
+		background: var(--light-color);
+
+		color: var(--dark-opacity-color);
+
+		cursor: pointer;
+	}
+}
+
+.dropdown__button {
+	display: block;
+
+	width: 100%;
+	height: 42px;
+
+	padding: rem(10) rem(28) rem(10) rem(20);
+	border: rem(1) solid var(--border-dark-color2);
+
+	border-radius: rem(3);
+	background: var(--light-color);
+
+	color: var(--dark-opacity-color);
+
+	text-align: left;
+
+	position: relative;
+	&::after {
+		content: '';
+
+		display: block;
+
+		position: absolute;
+		top: 50%;
+		right: rem(20);
+		transform: translateY(-50%) rotate(90deg);
+
+		width: rem(8);
+		height: rem(12);
+
+		background: url(./../img/icons/grey-arrow.svg);
+		background-repeat: no-repeat;
+
+		pointer-events: none;
+	}
+}
+
+
+.select {
+	max-width: rem(375);
+
+	@include media-breakpoint($sm) {
+		max-width: rem(300);
+	}
+
+	position: relative;
+
+    &__button {
+		display: block;
+
+		width: 100%;
+		min-height: rem(42);
+
+		padding: rem(10) rem(48) rem(10) rem(20);
+		border: rem(1) solid var(--border-dark-color2);
+
+		border-radius: rem(3);
+		background: var(--light-color);
+
+		color: var(--dark-opacity-color);
+
+		text-align: left;
+
+		position: relative;
+		&::after {
+			content: '';
+
+			display: block;
+
+			position: absolute;
+			top: 50%;
+			right: rem(20);
+			transform: translateY(-50%) rotate(90deg);
+			transition: transform .3s ease;
+
+			width: rem(8);
+			height: rem(12);
+
+			background: url(./../img/icons/grey-arrow.svg);
+			background-repeat: no-repeat;
+
+			pointer-events: none;
+		}
+
+		&:focus, &--active {
+			box-shadow: 0 0 0 rem(1) var(--grey-color);
+		}
+	}
+
+	&--active &__button::after {
+		transform: translateY(-50%) rotate(-90deg);
+		transition: transform .3s ease;
+	}
+
+    &__list {
+		overflow: hidden;
+
+		position: absolute;
+		bottom: -5px;
+		left: 0;
+		right: 0;
+		transform: translateY(100%);
+		z-index: 2;
+
+		display: none;
+	}
+
+	&__item {
+		&:first-child {
+			border-radius: rem(3) rem(3) 0 0;
+		}
+
+		&:last-child {
+			border-radius: 0 0 rem(3) rem(3);
+			border-bottom: rem(1) solid var(--border-dark-color2);
+		}
+	}
+
+	&--active &__list {
+		display: block;
+	}
+
+    &__item-button {
+		width: 100%;
+
+		padding: rem(10) rem(20) rem(10) rem(20);
+		border: rem(1) solid var(--border-dark-color2);
+		border-bottom: none;
+
+		background: var(--light-color);
+
+		color: var(--dark-opacity-color);
+
+		text-align: left;
+
+		cursor: pointer;
+
+		&:hover {
+			background: var(--light-color2);
+		}
+	}
+
+	&__input {
+		display: none;
+	}
+}
+
+

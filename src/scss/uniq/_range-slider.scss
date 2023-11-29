@@ -1,0 +1,84 @@
+.filter {
+	.noUi-horizontal {
+		height: rem(3);
+	}
+
+	.noUi-connect {
+		background: var(--dark-color2);
+	}
+
+	.noUi-target {
+		background: var(--accent-color);
+   	 	border: none;
+    	box-shadow: none;
+	}
+
+	.noUi-horizontal .noUi-handle {
+		width: 18px;
+		height: 18px;
+		border: 3px solid var(--accent-color);
+
+		border-radius: 50%;
+		background: var(--dark-color2);
+		transition: background .1s ease;
+
+		right: -17px;
+		top: calc(50% + 2px);
+		transform: translateY(-50%);
+	}
+
+	.noUi-handle {
+		.noUi-tooltip {
+			display: none;
+
+			bottom: rem(-28);
+			
+			border: none;
+			background: none;
+			padding: 0;
+			text-align: center;
+			white-space: nowrap;
+	
+			color: var(--dark-opacity-color);
+			font-size: rem(14);
+		}
+
+		&.noUi-active {
+			background: var(--accent-color);
+			transition: background .1s ease;
+
+			.noUi-tooltip {
+				display: block;
+			}
+		}
+	}
+
+	#range-slider-price .noUi-tooltip {
+		&::after {
+			content: ' руб.';
+		}
+	}
+
+	#range-slider-commonLength .noUi-tooltip,
+	#range-slider-bladeLength .noUi-tooltip,
+	#range-slider-bladeWidth .noUi-tooltip {
+		&::after {
+			content: ' мм';
+		}
+	}
+
+	.noUi-handle[data-handle="1"] {
+		right: 0;
+	}
+
+	.noUi-handle {
+		box-shadow: none;
+		box-shadow: (0 0 rem(20) var(--accent-color));
+	}
+
+	.noUi-handle:before, .noUi-handle:after {
+		content: "";
+		display: none;
+	}
+}
+

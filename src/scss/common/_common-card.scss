@@ -1,0 +1,138 @@
+.filter__grid .common-card {
+	padding-bottom: 0;
+}
+
+.common-card {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+
+	max-width: rem(375);
+	padding: rem(20) rem(20) rem(30) rem(20);
+
+	background: var(--light-color4);
+	box-shadow: 0 rem(4) rem(15) 0 var(--boxShadow-dark-color);
+
+	font-weight: 600;
+	line-height: 1.7;
+
+	position: relative;
+
+	@include media-breakpoint($xs) {
+		padding: rem(20) 0 0 0;
+	}
+
+	&__discount {
+		position: absolute;
+		top: rem(26);
+		left: 0;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		width: rem(90);
+		min-height: rem(35);
+
+		background: var(--accent-color);
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+
+		margin-bottom: rem(20);
+
+		@include media-breakpoint($xs) {
+			padding: 0 rem(20);
+			margin-bottom: 0;
+		}
+	}
+
+	&__discount-link {
+		color: var(--main-font-color);
+	}
+
+    &__img-wrapper {
+		padding: 0 rem(20);
+		margin-bottom: rem(50);
+	}
+
+	&__img-link {
+		display: flex;
+		justify-content: center;
+	}
+   
+	&__title-link {
+		color: var(	--dark-color);
+		font-size: rem(20);
+	}
+
+    &__card-info {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: rem(2) rem(30);
+
+		margin-bottom: auto;
+
+		color: var(--grey-color);
+	}
+
+    &__product-materials {
+		text-align: left;
+		overflow-wrap: break-word;
+	}
+	
+    &__rating {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: rem(10);
+		flex-wrap: wrap;
+
+		margin-top: rem(5);
+		margin-bottom: rem(20);
+
+		@include media-breakpoint($xs) {
+			flex-direction: column;
+			align-items: flex-start;
+			row-gap: rem(10);
+		} 
+	}
+
+    &__feedback {
+		color: var(--grey-color);
+		font-weight: 500;
+		line-height: 2.1;
+	}
+
+    &__price-info {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		padding-top: rem(20);
+		border-top: rem(1) solid var(--border-grey-color3);
+
+		@include media-breakpoint($xs) {
+			padding-bottom: rem(20);
+		}
+	}
+
+	&__price-link {
+		color: var(--dark-color);
+		font-size: rem(20);
+	}
+
+    &__icons {
+		display: flex;
+		gap: rem(15);
+	}
+
+	&__button {
+		margin-top: rem(30);
+	}
+}
+

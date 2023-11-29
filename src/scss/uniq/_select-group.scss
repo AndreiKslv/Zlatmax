@@ -1,0 +1,140 @@
+.select-group {
+	display: flex;
+	flex-direction: column;
+	row-gap: rem(20);
+
+	&--delivery {
+		max-width: rem(500);
+	}
+	
+	&__list-item {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: rem(20) rem(35);
+	
+		@include media-breakpoint($sm) {
+			flex-direction: column;
+			align-items: stretch;
+			row-gap: rem(8);
+		}
+	}
+	
+	&__item-property {
+		min-width: rem(180);
+	}
+	
+	&__item-value {
+		color: var(--dark-opacity-color);
+		font-size: rem(18);
+	}
+	
+	&__select-inputs {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(20);
+	}
+	
+	&__select-item-name {
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+	}
+	
+	&__select {
+		display: flex;
+		max-width: rem(535);
+		flex-grow: 1;
+	
+		position: relative;
+	
+		&:focus {
+			border-radius: rem(3);
+			outline: rem(2) solid var(--accent-color);
+		}
+	}
+	
+	&__select--active {
+		border-radius: rem(3);
+		outline: rem(2) solid var(--accent-color);
+	}
+	
+	&__input-button {
+		width: 100%;
+		min-height: rem(40);
+		padding: rem(5) rem(20);
+	
+		border-radius: rem(3) 0 0 rem(3);
+		border: rem(1) solid var(--dark-opacity-color2);
+	
+		text-align: left;
+		color: var(--dark-opacity-color);
+		font-size: rem(14);
+	
+		overflow: hidden;
+	}
+	
+	&__input-button--chosen {
+		color: var(--dark-color);
+		font-size: rem(16);
+	}
+	
+	&__button {
+		flex-shrink: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	
+		width: rem(40);
+		min-height: rem(40);
+	
+		border-radius: 0 rem(3) rem(3) 0;
+		background: var(--dark-color);
+		transition: background .3s ease;
+	}
+	
+	&__select:hover &__button {
+		background: var(--dark-mahogany);
+		transition: background .3s ease;
+	}
+	
+	&__button-img {
+		transition: transform .2s ease;
+	}
+	
+	&__select--active &__button-img {
+		transform: rotate(180deg);
+		transition: transform .2s ease;
+	}
+	
+	&__select-list {
+		display: none;
+	
+		position: absolute;
+		bottom: rem(-10);
+		left: 0;
+		right: 0;
+		transform: translateY(100%);
+		z-index: 1;
+	
+		background: var(--light-color4);
+		box-shadow: 0 rem(4) rem(20) 0 var(--boxShadow-dark-color2);
+	}
+	
+	&__select--active &__select-list {
+		display: block;
+	}
+	
+	&__select-list-item {
+		cursor: pointer;
+	
+		padding: rem(10) rem(30);
+		transition: background .2s ease, color .2s ease;
+	
+		&:hover {
+			background: var(--dark-color);
+			color: var(--main-font-color);
+			transition: background .2s ease, color .2s ease;
+		}
+	}
+}

@@ -1,0 +1,717 @@
+<div class="filter">
+	<div class="container">
+		<div class="filter__top">
+			<h3 class="filter__title">Разделочные ножи</h3>
+			<div class="filter__menu-select">
+				<button class="filter__menu-button">
+					<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px"
+						viewBox="0 0 612.006 612.006" xml:space="preserve">
+						<g>
+							<g>
+								<g>
+									<path d="M292.911,318.872H14.833C6.639,318.872,0,312.232,0,304.04c0-8.194,6.639-14.833,14.833-14.833h278.078
+				c8.194,0,14.833,6.639,14.833,14.833C307.744,312.232,301.105,318.872,292.911,318.872z" />
+									<path d="M597.167,318.872H449.638c-8.193,0-14.833-6.64-14.833-14.833c0-8.194,6.64-14.833,14.833-14.833h147.529
+				c8.193,0,14.833,6.639,14.833,14.833C612,312.232,605.36,318.872,597.167,318.872z" />
+									<path d="M214.545,506.712H14.833C6.639,506.712,0,500.072,0,491.88c0-8.193,6.639-14.834,14.833-14.834h199.712
+				c8.194,0,14.833,6.641,14.833,14.834C229.378,500.072,222.739,506.712,214.545,506.712z" />
+									<path d="M597.167,506.712H371.266c-8.193,0-14.833-6.64-14.833-14.833c0-8.192,6.64-14.833,14.833-14.833h225.901
+				c8.193,0,14.833,6.641,14.833,14.833C612,500.072,605.36,506.712,597.167,506.712z" />
+									<path d="M129.368,134.96H14.833C6.639,134.96,0,128.32,0,120.127s6.639-14.833,14.833-14.833h114.535
+				c8.193,0,14.833,6.639,14.833,14.833S137.562,134.96,129.368,134.96z" />
+									<path d="M597.167,134.96H286.1c-8.194,0-14.833-6.639-14.833-14.833s6.639-14.833,14.833-14.833h311.073
+				c8.193,0,14.833,6.639,14.833,14.833C612,128.32,605.36,134.96,597.167,134.96z" />
+									<path d="M175.635,181.215c-33.695,0-61.101-27.406-61.101-61.1c0-33.683,27.406-61.089,61.101-61.089
+				c33.683,0,61.088,27.406,61.088,61.089C236.718,153.81,209.312,181.215,175.635,181.215z M175.635,88.693
+				c-17.331,0-31.434,14.097-31.434,31.422c0,17.331,14.103,31.434,31.434,31.434c17.325,0,31.422-14.104,31.422-31.434
+				C207.052,102.791,192.954,88.693,175.635,88.693z" />
+									<path d="M257.709,552.979c-33.695,0-61.1-27.406-61.1-61.102c0-33.688,27.405-61.095,61.1-61.095
+				c33.689,0,61.094,27.406,61.094,61.095C318.798,525.573,291.393,552.979,257.709,552.979z M257.709,460.45
+				c-17.331,0-31.434,14.099-31.434,31.43c0,17.33,14.103,31.435,31.434,31.435s31.428-14.104,31.428-31.435
+				C289.137,474.549,275.035,460.45,257.709,460.45z" />
+									<path d="M339.173,365.121c-33.689,0-61.095-27.404-61.095-61.094c0-33.683,27.406-61.089,61.095-61.089
+				c33.688,0,61.094,27.406,61.094,61.089C400.267,337.716,372.861,365.121,339.173,365.121z M339.173,272.605
+				c-17.331,0-31.429,14.097-31.429,31.422c0,17.331,14.098,31.428,31.429,31.428s31.428-14.097,31.428-31.428
+				C370.601,286.702,356.504,272.605,339.173,272.605z" />
+								</g>
+							</g>
+						</g>
+					</svg>
+					Фильтр товаров
+				</button>
+				@@include('./select/select.html')
+			</div>
+		</div>
+		<div class="filter__body">
+			<div class="filter__aside">
+				<div class="filter__aside-buttons">
+					<button class="filter__aside-main-title">Фильтр товаров</button>
+					<button class="filter__aside-main-back">
+						<svg class="filter__aside-main-back-svg" width="20" height="20" viewBox="0 0 16 16" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M3.3452 8.83333L8.58928 14.0774L7.41077 15.2559L0.154846 8L7.41077 0.74408L8.58928 1.92259L3.3452 7.16667H15.5V8.83333H3.3452Z"
+								fill="white" />
+						</svg>
+					</button>
+				</div>
+				<div class="filter__aside-spoiler filter__aside-spoiler--active">
+					<button class="filter__aside-title" data-filter-spoiler>Цена</button>
+					<div class="filter__aside-spoiler-body">
+						<div class="filter__aside-range-inputs">
+							<label class="filter__aside-range-label">
+								<input class="filter__aside-range-input" min="2000" max="150000" placeholder="2000"
+									type="number" id="range-slider-price-1">
+								<span class="filter__aside-range-value">руб.</span>
+							</label>
+							<label class="filter__aside-range-label">
+								<input class="filter__aside-range-input" min="2000" max="150000" placeholder="150000"
+									type="number" id="range-slider-price-2">
+								<span class="filter__aside-range-value">руб.</span>
+							</label>
+						</div>
+						<div class="filter__aside-range-slider" id="range-slider-price"></div>
+					</div>
+				</div>
+				<div class="filter__aside-spoiler filter__aside-spoiler--active">
+					<button class="filter__aside-title" data-filter-spoiler>Производство</button>
+					<div class="filter__aside-spoiler-body">
+						<ul class="filter__checkbox-list">
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox-all" type="checkbox" checked data-filter-all>
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Все</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-production="АиР">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">АиР</span>
+									<span class="filter__checkbox-amount">(250)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-production="Булат Сергея Баранова">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Булат Сергея Баранова</span>
+									<span class="filter__checkbox-amount">(25)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-production="Булат Умерова">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Булат Умерова</span>
+									<span class="filter__checkbox-amount">(265)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-production="ЗЗОСС">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">ЗЗОСС</span>
+									<span class="filter__checkbox-amount">(18)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-production="ЗИК">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">ЗИК</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-production="ЗЛАТКО">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">ЗЛАТКО</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-production="ЗлатПрофит">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">ЗлатПрофит</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-production="ЗОК">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">ЗОК</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-production="НБК">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">НБК</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-production="НИКОН">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">НИКОН</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-production="Оружейник">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Оружейник</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-production="РОСоружие">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">РОСоружие</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-production="СТИЛЬ-М">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">СТИЛЬ-М</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="filter__aside-spoiler filter__aside-spoiler--active">
+					<button class="filter__aside-title" data-filter-spoiler>Сталь</button>
+					<div class="filter__aside-spoiler-body">
+						<ul class="filter__checkbox-list">
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox-all" type="checkbox" checked data-filter-all>
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Все</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked data-filter-steel="100х13М">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">100х13М</span>
+									<span class="filter__checkbox-amount">(250)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-steel="110х18М-ШД">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">110х18М-ШД</span>
+									<span class="filter__checkbox-amount">(25)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-steel="40х10С2М (ЭИ-107)">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">40х10С2М (ЭИ-107)</span>
+									<span class="filter__checkbox-amount">(265)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked data-filter-steel="50х14МФ">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">50х14МФ</span>
+									<span class="filter__checkbox-amount">(18)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked data-filter-steel="95х18">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">95х18</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked data-filter-steel="AUS-8">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">AUS-8</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked data-filter-steel="ELMAX">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">ELMAX</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked data-filter-steel="RWL-34">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">RWL-34</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked data-filter-steel="Дамаск">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Дамаск</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked data-filter-steel="К340">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">К340</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-steel="Литой булат">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Литой булат</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked data-filter-steel="М390">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">М390</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="filter__aside-spoiler filter__aside-spoiler--active">
+					<button class="filter__aside-title" data-filter-spoiler>Рукоять</button>
+					<div class="filter__aside-spoiler-body">
+						<ul class="filter__checkbox-list">
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox-all" type="checkbox" checked data-filter-all>
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Все</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked data-filter-hilt="Mercorne">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Mercorne</span>
+									<span class="filter__checkbox-amount">(250)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-hilt="Березовый кап">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Березовый кап</span>
+									<span class="filter__checkbox-amount">(25)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked data-filter-hilt="Бубинго">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Бубинго</span>
+									<span class="filter__checkbox-amount">(265)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked data-filter-hilt="Граб">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Граб</span>
+									<span class="filter__checkbox-amount">(18)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked data-filter-hilt="Дуб">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Дуб</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked data-filter-hilt="Орех">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Орех</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked data-filter-hilt="Кап">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Кап</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-hilt="Комбинированная">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Комбинированная</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked data-filter-hilt="Каштан">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Каштан</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-hilt="Квартопрен">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Квартопрен</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-hilt="Кожа-Металл">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Кожа-Металл</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="filter__aside-spoiler filter__aside-spoiler--active">
+					<button class="filter__aside-title" data-filter-spoiler>Гарда и тыльник</button>
+					<div class="filter__aside-spoiler-body">
+						<ul class="filter__checkbox-list">
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox-all" type="checkbox" checked data-filter-all>
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Все</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-pommel="Алюминий">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Алюминий</span>
+									<span class="filter__checkbox-amount">(250)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked data-filter-pommel="Латунь">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Латунь</span>
+									<span class="filter__checkbox-amount">(25)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-pommel="Литой Барс">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Литой Барс</span>
+									<span class="filter__checkbox-amount">(265)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-pommel="Литой Пума">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Литой Пума</span>
+									<span class="filter__checkbox-amount">(18)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked data-filter-pommel="Литье">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Литье</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-pommel="Металлический">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Металлический</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-pommel="Нержавеющая сталь">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Нержавеющая сталь</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-pommel="Текстолит">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Текстолит</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-pommel="Комбинированная">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Комбинированная</span>
+									<span class="filter__checkbox-amount">(170)</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="filter__aside-spoiler filter__aside-spoiler--active">
+					<button class="filter__aside-title" data-filter-spoiler>Золочение</button>
+					<div class="filter__aside-spoiler-body">
+						<ul class="filter__checkbox-list">
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-gilding="Без золочения">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Без золочения</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-gilding="Золочение клинка">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Золочение клинка</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked
+										data-filter-gilding="Золочение рисунка на клинке">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-name">Золочение рисунка на клинке</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="filter__aside-spoiler filter__aside-spoiler--active">
+					<button class="filter__aside-title" data-filter-spoiler>Общая длина, мм</button>
+					<div class="filter__aside-spoiler-body">
+						<div class="filter__aside-range-inputs">
+							<label class="filter__aside-range-label">
+								<input class="filter__aside-range-input" min="100" max="1000" placeholder="100"
+									type="number" id="range-slider-totalLength-1">
+								<span class="filter__aside-range-value">мм</span>
+							</label>
+							<label class="filter__aside-range-label">
+								<input class="filter__aside-range-input" min="100" max="1000" placeholder="1000"
+									type="number" id="range-slider-totalLength-2">
+								<span class="filter__aside-range-value">мм</span>
+							</label>
+						</div>
+						<div class="filter__aside-range-slider" id="range-slider-totalLength"></div>
+					</div>
+				</div>
+				<div class="filter__aside-spoiler filter__aside-spoiler--active">
+					<button class="filter__aside-title" data-filter-spoiler>Длина клинка, мм</button>
+					<div class="filter__aside-spoiler-body">
+						<div class="filter__aside-range-inputs">
+							<label class="filter__aside-range-label">
+								<input class="filter__aside-range-input" min="50" max="750" placeholder="50"
+									type="number" id="range-slider-bladeLength-1">
+								<span class="filter__aside-range-value">мм</span>
+							</label>
+							<label class="filter__aside-range-label">
+								<input class="filter__aside-range-input" min="50" max="750" placeholder="750"
+									type="number" id="range-slider-bladeLength-2">
+								<span class="filter__aside-range-value">мм</span>
+							</label>
+						</div>
+						<div class="filter__aside-range-slider" id="range-slider-bladeLength"></div>
+					</div>
+				</div>
+				<div class="filter__aside-spoiler filter__aside-spoiler--active">
+					<button class="filter__aside-title" data-filter-spoiler>Ширина клинка, мм</button>
+					<div class="filter__aside-spoiler-body">
+						<div class="filter__aside-range-inputs">
+							<label class="filter__aside-range-label">
+								<input class="filter__aside-range-input" min="10" max="200" placeholder="10"
+									type="number" id="range-slider-bladeWidth-1">
+								<span class="filter__aside-range-value">мм</span>
+							</label>
+							<label class="filter__aside-range-label">
+								<input class="filter__aside-range-input" min="10" max="200" placeholder="200"
+									type="number" id="range-slider-bladeWidth-2">
+								<span class="filter__aside-range-value">мм</span>
+							</label>
+						</div>
+						<div class="filter__aside-range-slider" id="range-slider-bladeWidth"></div>
+					</div>
+				</div>
+				<div class="filter__aside-spoiler filter__aside-spoiler--active">
+					<button class="filter__aside-title" data-filter-spoiler>Рейтинг</button>
+					<div class="filter__aside-spoiler-body">
+						<ul class="filter__checkbox-list">
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked data-filter-rating="5">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-star-group">
+										<img class="filter__checkbox-star" src="./img/filter/star.svg" alt="Звездочка">
+										<img class="filter__checkbox-star" src="./img/filter/star.svg" alt="Звездочка">
+										<img class="filter__checkbox-star" src="./img/filter/star.svg" alt="Звездочка">
+										<img class="filter__checkbox-star" src="./img/filter/star.svg" alt="Звездочка">
+										<img class="filter__checkbox-star" src="./img/filter/star.svg" alt="Звездочка">
+									</span>
+									<span class="filter__checkbox-amount filter__checkbox-amount--stars">5/5</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked data-filter-rating="4">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-star-group">
+										<img class="filter__checkbox-star" src="./img/filter/star.svg" alt="Звездочка">
+										<img class="filter__checkbox-star" src="./img/filter/star.svg" alt="Звездочка">
+										<img class="filter__checkbox-star" src="./img/filter/star.svg" alt="Звездочка">
+										<img class="filter__checkbox-star" src="./img/filter/star.svg" alt="Звездочка">
+									</span>
+									<span class="filter__checkbox-amount filter__checkbox-amount--stars">4/5</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked data-filter-rating="3">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-star-group">
+										<img class="filter__checkbox-star" src="./img/filter/star.svg" alt="Звездочка">
+										<img class="filter__checkbox-star" src="./img/filter/star.svg" alt="Звездочка">
+										<img class="filter__checkbox-star" src="./img/filter/star.svg" alt="Звездочка">
+									</span>
+									<span class="filter__checkbox-amount filter__checkbox-amount--stars">3/5</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked data-filter-rating="2">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-star-group">
+										<img class="filter__checkbox-star" src="./img/filter/star.svg" alt="Звездочка">
+										<img class="filter__checkbox-star" src="./img/filter/star.svg" alt="Звездочка">
+									</span>
+									<span class="filter__checkbox-amount filter__checkbox-amount--stars">2/5</span>
+								</label>
+							</li>
+							<li class="filter__checkbox-item">
+								<label class="filter__checkbox-label">
+									<input class="filter__checkbox" type="checkbox" checked data-filter-rating="1">
+									<span class="filter__checkbox-custom"></span>
+									<span class="filter__checkbox-star-group">
+										<img class="filter__checkbox-star" src="./img/filter/star.svg" alt="Звездочка">
+									</span>
+									<span class="filter__checkbox-amount filter__checkbox-amount--stars">1/5</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="filter__content">
+				<div class="filter__grid">
+				</div>
+				<div class="filter__content-bottom">
+					<button class="filter__showmore-button">Показать больше</button>
+					<div class="filter__pagination pagination">
+						<button class="pagination__button pagination__button--prev" disabled>
+							<svg class="pagination__button-img pagination__button-img--prev" width="20" height="20"
+								viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_60_1943)">
+									<path
+										d="M4.70962 10.9901L13.3093 19.5895C13.8564 20.1368 14.7433 20.1368 15.2901 19.5895C15.8369 19.0427 15.8369 18.1558 15.2901 17.609L7.68067 9.99986L15.2899 2.39095C15.8367 1.84391 15.8367 0.957105 15.2899 0.410283C14.743 -0.136761 13.8561 -0.136761 13.3091 0.410283L4.70939 9.00983C4.43598 9.28337 4.29943 9.6415 4.29943 9.99981C4.29943 10.3583 4.43625 10.7167 4.70962 10.9901Z"
+										fill="#000" />
+								</g>
+								<defs>
+									<clipPath>
+										<rect width="20" height="20" fill="white" transform="matrix(-1 0 0 1 20 0)" />
+									</clipPath>
+								</defs>
+							</svg>
+						</button>
+						<ul class="pagination__list">
+
+						</ul>
+						<button class="pagination__button pagination__button--next pagination__button--active">
+							<svg class="pagination__button-img pagination__button-img--next" width="20"
+								height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_60_1943)">
+									<path
+										d="M4.70962 10.9901L13.3093 19.5895C13.8564 20.1368 14.7433 20.1368 15.2901 19.5895C15.8369 19.0427 15.8369 18.1558 15.2901 17.609L7.68067 9.99986L15.2899 2.39095C15.8367 1.84391 15.8367 0.957105 15.2899 0.410283C14.743 -0.136761 13.8561 -0.136761 13.3091 0.410283L4.70939 9.00983C4.43598 9.28337 4.29943 9.6415 4.29943 9.99981C4.29943 10.3583 4.43625 10.7167 4.70962 10.9901Z"
+										fill="#000" />
+								</g>
+								<defs>
+									<clipPath>
+										<rect width="20" height="20" fill="white" transform="matrix(-1 0 0 1 20 0)" />
+									</clipPath>
+								</defs>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
