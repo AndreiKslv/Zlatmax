@@ -832,6 +832,8 @@ function productsFilter() {
 	let filtedredAndSortedProducts
 	let pageStart = 0
 	let pageEnd = 21
+	let pageNewStart = 0
+	let pageNewEnd = 21
 
 	if (document.documentElement.clientWidth <= 767.98) {
 		pageEnd = 9
@@ -848,7 +850,7 @@ function productsFilter() {
 
 	showMoreButtonDisplay()
 
-	displayPagination(filteredProducts, pageEnd)
+	displayPagination(filteredProducts, pageNewEnd)
 
 	filterAside.addEventListener('click', function(e) {
 		if (e.target.classList.contains('noUi-handle') || e.target.classList.contains('noUi-touch-area')) {
@@ -864,22 +866,22 @@ function productsFilter() {
 		const checkboxFilterAll = e.target.closest('[data-filter-all]')
 
 		if (checkboxFilter) {
-			filterProducts(pageStart, pageEnd)
+			filterProducts(pageNewStart, pageNewEnd)
 			showMoreButtonDisplay()
-			displayPagination(filteredProducts, pageEnd)
+			displayPagination(filteredProducts, pageNewEnd)
 		}
 
 		if (isCheckboxFilterAll) {
 			if (checkboxFilterAll.checked) {
 				setAllChecked(e)
-				filterProducts(pageStart, pageEnd)
+				filterProducts(pageNewStart, pageNewEnd)
 				showMoreButtonDisplay()
 				displayPagination(filteredProducts, pageEnd)
 			} else {
 				setAllNotChecked(e)
-				filterProducts(pageStart, pageEnd)
+				filterProducts(pageNewStart, pageNewEnd)
 				showMoreButtonDisplay()
-				displayPagination(filteredProducts, pageEnd)
+				displayPagination(filteredProducts, pageNewEnd)
 			}
 		}
 	})
@@ -887,67 +889,14 @@ function productsFilter() {
 	filterSelectForm.addEventListener('submit', function(e) {
 		e.preventDefault()
 
-		if (filterSelectInput.value === 'popularity') {	
-			filteredProducts.sort((a, b) => b.feedback - a.feedback)
-			filtedredAndSortedProducts = filteredProducts.slice(pageStart, pageEnd)
-			renderProducts(filtedredAndSortedProducts)
-
-			currentPage = 1
-			checkDisableButton()
-			togglePage()
-			countLimitsOfEachPages()
-		}
-
-		if (filterSelectInput.value === 'best-mark') {	
-			filteredProducts.sort((a, b) => b.rating - a.rating)
-			filtedredAndSortedProducts = filteredProducts.slice(pageStart, pageEnd)
-			renderProducts(filtedredAndSortedProducts)
-
-			currentPage = 1
-			checkDisableButton()
-			togglePage()
-			countLimitsOfEachPages()
-		}
-	
-		if (filterSelectInput.value === 'cheap') {
-			filteredProducts.sort((a, b) => a.price - b.price)
-			filtedredAndSortedProducts = filteredProducts.slice(pageStart, pageEnd)
-			renderProducts(filtedredAndSortedProducts)
-
-			currentPage = 1
-			checkDisableButton()
-			togglePage()
-			countLimitsOfEachPages()
-		}
-
-		if (filterSelectInput.value === 'expensive') {	
-			filteredProducts.sort((a, b) => b.price - a.price)
-			filtedredAndSortedProducts = filteredProducts.slice(pageStart, pageEnd)
-			renderProducts(filtedredAndSortedProducts)
-
-			currentPage = 1
-			checkDisableButton()
-			togglePage()
-			countLimitsOfEachPages()
-		}
-
-		if (filterSelectInput.value === 'discount') {	
-			filteredProducts.sort((a, b) => b.discount - a.discount)
-			filtedredAndSortedProducts = filteredProducts.slice(pageStart, pageEnd)
-			renderProducts(filtedredAndSortedProducts)
-
-			currentPage = 1
-			checkDisableButton()
-			togglePage()
-			countLimitsOfEachPages()
-		}
+		filterProducts(pageNewStart, pageNewEnd)
 	})
 
 	showMoreButton.addEventListener('click', function() {
 		showMoreProducts = 3
-		pageEnd += showMoreProducts
-		filterProducts(pageStart, pageEnd)
-		displayPagination(filteredProducts, pageEnd)
+		pageNewEnd += showMoreProducts
+		filterProducts(pageNewStart, pageNewEnd)
+		displayPagination(filteredProducts, pageNewEnd)
 		showMoreButtonDisplay()
 	})
 
@@ -956,14 +905,20 @@ function productsFilter() {
 			currentPage--
 			checkDisableButton()
 			togglePage()
+
 			countLimitsOfEachPages()
+			showMoreButtonDisplay()
+			filterProducts(pageNewStart, pageNewEnd)
 		}
 
 		if (e.target == buttonNext) {
 			currentPage++
 			checkDisableButton()
 			togglePage()
+
 			countLimitsOfEachPages()
+			showMoreButtonDisplay()
+			filterProducts(pageNewStart, pageNewEnd)
 		}
 
 		if (e.target.hasAttribute('page') && !e.target.classList.contains('pagination__list-item--active')) {
@@ -971,25 +926,34 @@ function productsFilter() {
 			currentPage = pageNumber
 			checkDisableButton()
 			togglePage()
+
 			countLimitsOfEachPages()
+			showMoreButtonDisplay()
+			filterProducts(pageNewStart, pageNewEnd)
 		}
 	})
 
 	function displayPagination(arrData, rowPerPage) {
-		pagesCount = Math.ceil(arrData.length / rowPerPage)
+		let rest = rowPerPage - pageNewStart
+		pagesCount = Math.ceil(arrData.length / rest)
 		paginationUl.innerHTML = ''
+
 		for (let i = 0; i < pagesCount; i++) {
 			const pageHTMLActive = currentPage == i + 1 ? 'pagination__list-item--active' : ''
 			const pageHTML = `<li class="pagination__list-item ${pageHTMLActive}" page="${i + 1}">${i + 1}</li>`
 			paginationUl.insertAdjacentHTML('beforeend', pageHTML)
 		}
-		pagesCount <= 1 ? pagination.style.display = 'none' : pagination.style.display = 'flex'
+		
+		pagesCount <= 1  ? pagination.style.display = 'none' : pagination.style.display = 'flex'
 	}
 
 	function togglePage() {
-		const removedActivePage = paginationUl.querySelector('.pagination__list-item--active').classList.remove('pagination__list-item--active')
-		const activePage = paginationUl.querySelector(`li[page="${currentPage}"]`)
-		activePage ? activePage.classList.add('pagination__list-item--active') : null
+		const activePage = paginationUl.querySelector('.pagination__list-item--active')
+		if (activePage) {
+			activePage.classList.remove('pagination__list-item--active')
+			const newActivePage = paginationUl.querySelector(`li[page="${currentPage}"]`)
+			newActivePage ? newActivePage.classList.add('pagination__list-item--active') : null
+		}
 	}
 
 	function checkDisableButton() {
@@ -1102,7 +1066,69 @@ function productsFilter() {
 			 checkedArr[2].includes(item.hilt) && checkedArr[3].includes(item.pommel) && 
 			 checkedArr[4].includes(item.gilding) && checkedArr[5].includes(item.rating.toString())))
 
+		
+		if (filterSelectInput.value === 'popularity') {	
+			checkDisableButton()
+			togglePage()
+			countLimitsOfEachPages()
+
+			filteredProducts.sort((a, b) => b.feedback - a.feedback)
+			filtedredAndSortedProducts = filteredProducts.slice(start, end)
+			renderProducts(filtedredAndSortedProducts)
+
+			return
+		}
+
+		if (filterSelectInput.value === 'best-mark') {	
+			checkDisableButton()
+			togglePage()
+			countLimitsOfEachPages()
+
+			filteredProducts.sort((a, b) => b.rating - a.rating)
+			filtedredAndSortedProducts = filteredProducts.slice(start, end)
+			renderProducts(filtedredAndSortedProducts)
+
+			return
+		}
+	
+		if (filterSelectInput.value === 'cheap') {
+			checkDisableButton()
+			togglePage()
+			countLimitsOfEachPages()
+
+			filteredProducts.sort((a, b) => a.price - b.price)
+			filtedredAndSortedProducts = filteredProducts.slice(start, end)
+			renderProducts(filtedredAndSortedProducts)
+
+			return
+		}
+
+		if (filterSelectInput.value === 'expensive') {	
+			checkDisableButton()
+			togglePage()
+			countLimitsOfEachPages()
+
+			filteredProducts.sort((a, b) => b.price - a.price)
+			filtedredAndSortedProducts = filteredProducts.slice(start, end)
+			renderProducts(filtedredAndSortedProducts)
+
+			return
+		}
+
+		if (filterSelectInput.value === 'discount') {	
+			checkDisableButton()
+			togglePage()
+			countLimitsOfEachPages()
+
+			filteredProducts.sort((a, b) => b.discount - a.discount)
+			filtedredAndSortedProducts = filteredProducts.slice(start, end)
+			renderProducts(filtedredAndSortedProducts)
+			
+			return
+		}
+
 		filteredProductsLimited = filteredProducts.slice(start, end)
+
 		renderProducts(filteredProductsLimited)
 	}
 
@@ -1117,14 +1143,14 @@ function productsFilter() {
 	}
 
 	function showMoreButtonDisplay() {
-		filteredProducts.length <= pageEnd ? showMoreButton.style.display = 'none' : showMoreButton.style.display = 'block'
+		console.log(`${pageNewEnd} - showmorebutton`)
+		filteredProducts.length <= pageNewEnd ? showMoreButton.style.display = 'none' : showMoreButton.style.display = 'block'
 	}
 
 	function countLimitsOfEachPages() {
 		let page = currentPage - 1
-		let newStart = pageEnd * page
-		let newEnd = newStart + pageEnd
-		filterProducts(newStart, newEnd)
+		pageNewStart = pageEnd * page
+		pageNewEnd = pageNewStart + pageEnd
 	}
 }
 
